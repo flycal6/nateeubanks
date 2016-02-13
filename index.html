@@ -23,9 +23,11 @@
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
 </head>
+
 <!-- NAVBAR
 ================================================== -->
 <body>
+<div class="container-fluid">
 <div class="navbar-wrapper">
     <div class="container">
 
@@ -43,7 +45,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=qdFZyUNPiyQ">YouTube</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=qdFZyUNPiyQ" target="_blank">YouTube</a></li>
                         <li><a href="mailto:nathan.eubanks@gmail.com">Contact</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Past Shows<span class="caret"></span></a>
@@ -87,7 +89,7 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img class="first-slide" src="images/nateback.jpg" alt="First slide">
+            <img class="first-slide" src="images/nateback.jpg" alt="Nate on Stage">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>@nateeubanks</h1>
@@ -97,7 +99,7 @@
             </div>
         </div>
         <div class="item">
-            <img class="second-slide" src="images/natetalk.jpg" alt="Second slide">
+            <img class="second-slide" src="images/natetalk.jpg" alt="Nate talking into mic">
             <div class="container">
                 <div class="carousel-caption">
 
@@ -108,7 +110,7 @@
             </div>
         </div>
         <div class="item">
-            <img class="third-slide" src="images/natemic.jpg" alt="Third slide">
+            <img class="third-slide" src="images/natemic.jpg" alt="Nate with crazy hair on stage">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>"I thought he was Jewish.  What a let down."</h1>
@@ -132,8 +134,8 @@
 <!-- Twitter TimeLine and Video -->
 <!-- ================================================== -->
 
-<div class="row" >
-    <div class="col-sm-3 col-md-3"> <!-- height attr is not HTML5 compliant, but style tag doesn't work -->
+<div class="row">
+    <div class="col-sm-3 col-md-3"> <!-- height attr is not HTML5 compliant but functions; replacing with style tag doesn't work -->
         <a class="twitter-timeline" href="https://twitter.com/NateEubanks" data-widget-id="649626255378247680" height="500">Tweets by @NateEubanks</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.ocation)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
@@ -152,8 +154,6 @@
 <div class="container marketing">
 
 
-
-
     <!-- START THE FEATURETTES -->
 
     <hr class="featurette-divider">
@@ -166,7 +166,7 @@
                 Truly a funny dude." - Rob Schulte</p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" src="images/natesmile.jpg" alt="Generic placeholder image">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" src="images/natesmile.jpg" alt="Image of Nate smiling">
         </div>
     </div>
 
@@ -182,7 +182,7 @@
                 and you know who has the best joke about cats? You bet your britches it's Nate freakin' Eubanks." - Tristan Newell</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" src="images/nategrimmace.jpg" alt="Generic placeholder image">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" src="images/nategrimmace.jpg" alt="Image of Nate frowning">
         </div>
     </div>
 
@@ -210,7 +210,7 @@
     </footer>
 
 </div><!-- /.container -->
-
+</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

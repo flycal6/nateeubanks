@@ -32,11 +32,16 @@ body {
 .navbar-wrapper .navbar .container {
     width: auto;
 }
-
+.navbar {
+    margin-bottom: 0;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
+/*.container-fluid {
+    max-width: 1600px;
+}*/
 /* Carousel base class */
 .carousel {
     height: 50%;
@@ -134,8 +139,8 @@ body {
 
 @media (max-width: 767px) {
     #myCarousel {
-        top:50px;
-        margin-bottom: 60px;
+        /*top:50px;*/
+        /*margin-bottom: 60px;*/
     }
 
     .carousel-caption h1 {

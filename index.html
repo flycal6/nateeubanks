@@ -22,6 +22,21 @@
 
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
+
+    <!-- gCalFlow -->
+    <link href="jquery-gcal-flow-3.0.1/jquery.gcal_flow.css" rel="stylesheet" type="text/css">
+
+    <style>
+        #gcf-nate-events {
+            height: auto;
+            margin-bottom: 0;
+            padding-bottom: 5px;
+        }
+        .gcf-item-container-block {
+            padding-left: 5px;
+            width: auto;
+        }
+    </style>
 </head>
 
 <!-- NAVBAR
@@ -39,7 +54,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand active" href="index.html">Nathan Eubanks</a>
+                    <a class="navbar-brand active" href="/">Nathan Eubanks</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -70,9 +85,33 @@
                                 <li><a href="http://www.stregisdoha.com/" target="_blank">Doha, Qatar - Jazz at the Lincoln Center at St. Regis</a></li>
                                 <li><a href="http://thedomainhotels.com/restaurant_1/txoko.en.html" target = _blank>Manama, Bahrain - Txoko Lounge</a></li>
                                 <li role="separator" class="divider"></li>
-                                <!--<li class="dropdown-header">Nav header</li>-->
-                                <!--<li><a href="#">Separated link</a></li>-->
-                                <!--<li><a href="#">One more separated link</a></li>-->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle ="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div id="gcf-nate-events">
+                                        <div class="gcf-item-container-block">
+                                            <div class="gcf-item-block">
+                                                <div class="gcf-item-header-block">
+                                                    <div class="gcf-item-date-block">
+                                                        <span class="gcf-item-daterange"></span>
+                                                    </div>
+                                                    <div class="gcf-item-title-block">
+                                                        <strong class="gcf-item-title"></strong>
+                                                    </div>
+                                                </div>
+                                                <div class="gcf-item-body-block">
+                                                    <div class="gcf-item-description">
+                                                    </div>
+                                                    <div class="gcf-item-location">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -210,7 +249,6 @@
 
     <!-- /END THE FEATURETTES -->
 
-
     <!-- FOOTER -->
     <footer class="footer">
         <p><a href="http://www.moneykatz.com/contact.html">&copy; 2017 Brian Thomas &middot;</a>
@@ -225,6 +263,25 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+<!-- gCalFlow
+================================================== -->
+<script>_gCalFlow_debug = true;</script>
+<script type="text/javascript" src="jquery-gcal-flow-3.0.1/jquery.gcal_flow.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#gcf-nate-events').gCalFlow({
+            // calid: 'ask.edu.kw_2d36343231363737342d363134%40resource.calendar.google.com',
+            calid: 'j4ttdotndrai1e6grt7bp7i6ko@group.calendar.google.com',
+            // apikey: 'AIzaSyC8z-yio3AXTmOXlgt8zQam57uSD8tMObY',
+            maxitem: 15,
+	        auto_scroll: false,
+            no_items_html: 'No Upcoming Shows',
+//            link_item_title: false
+        });
+    });
+</script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>

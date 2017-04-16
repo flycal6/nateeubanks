@@ -1,0 +1,129 @@
+.gCalFlow {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    float: none;
+    font-size: 90%;
+    overflow: hidden;
+    text-decoration: none;
+    padding-bottom: 0.5em;
+}
+
+.gCalFlow a, .gCalFlow a:visited, .gCalFlow a:hover {
+    color: inherit;
+    _color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.gCalFlow a:hover {
+    text-decoration: underline;
+}
+
+.gCalFlow .gcf-header-block {
+    padding: 5px 4px;
+    font-size: 2em;
+}
+
+.gCalFlow .gcf-title-block {
+    /*font-weight: bold;*/
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.gCalFlow .gcf-title-block a, .gCalFlow .gcf-title-block a:visited, .gCalFlow .gcf-title-block a:hover {
+    _color: white;
+}
+
+.gCalFlow .gcf-last-update-block {
+    font-size: 60%;
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    padding-right: 20px;
+    position: absolute;
+}
+
+.gCalFlow .gcf-item-container-block {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 90%;
+}
+
+.gCalFlow .gcf-item-block {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px dashed #ccc;
+    padding: 2px;
+    margin: 2px 0;
+}
+
+.gCalFlow .gcf-item-header-block {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.gcf-item-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+.gCalFlow .gcf-item-date-block {
+    /*font-size: 76%;*/
+    /*font-weight: bold;*/
+
+}
+
+.gcf-item-daterange {
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+.gCalFlow .gcf-item-title-block {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+    font-size: 1.3em;
+
+}
+.gcf-item-title {
+    white-space: normal;
+    word-wrap: break-word;
+    /*word-break: break-all;*/
+}
+
+.gCalFlow .gcf-item-body-block {
+    font-size: .8em;
+    font-color: #999;
+    max-height: 2.45em;
+}
+
+.gCalFlow {
+    border-style: solid;
+    border-width: 0px;
+    border-color: #ccc #999 #999 #ccc;
+    background: #f7f7f7;
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffffff, EndColorStr=#ffeeeeee);
+    zoom: 1;
+    color: #2d3032;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.gCalFlow .gcf-header-block {
+    /*-webkit-border-top-left-radius: 4px;*/
+    /*-webkit-border-top-right-radius: 4px;*/
+    /*-moz-border-top-left-radius: 4px;*/
+    /*-moz-border-top-right-radius: 4px;*/
+    /*border-top-left-radius: 4px;*/
+    /*border-top-right-radius: 4px;*/
+    background: -webkit-gradient(linear, left top, left bottom, from(#AAB1DC), to(#3B4CA5));
+    background: -moz-linear-gradient(top, #AAB1DC, #3B4CA5);
+    background: -o-linear-gradient(top, #AAB1DC, #3B4CA5);
+    background: linear-gradient(to bottom, #AAB1DC, #3B4CA5);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffAAB1DC, EndColorStr=#ff3B4CA5);
+    zoom: 1;
+}
+
+.gCalFlow .gcf-item-body-block {
+    color: #3333;
+}

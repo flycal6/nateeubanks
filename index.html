@@ -268,14 +268,26 @@
     $(function () {
         $('#gcf-nate-events').gCalFlow({
             calid: 'j4ttdotndrai1e6grt7bp7i6ko@group.calendar.google.com',
+            // callback: loadLinks(),
+            // Comment out the apikey line below only for testing
             apikey: 'AIzaSyC8z-yio3AXTmOXlgt8zQam57uSD8tMObY',
             maxitem: 15,
 	        auto_scroll: false,
             no_items_html: 'No Upcoming Shows',
-//            link_item_title: false
+            // link_item_title: false,
+            // link_item_description: true
         });
     });
 </script>
+
+<!-- <script>
+    function loadLinks() {
+        var sourceLink = document.getElementById('aSource');
+        sourceLink = sourceLink.innerHTML;
+
+        document.getElementById("aClicked").setAttribute('href', sourceLink);
+    }
+</script> -->
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>

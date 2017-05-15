@@ -17,7 +17,7 @@
 }
 @media (max-width: 768px) {
     .gCalFlow a, .gCalFlow a:visited, .gCalFlow a:hover, .gcf-item-description, .gcf-item-location {
-        color: white;
+        color: #9d9d9d;
     }
 }
 
@@ -75,7 +75,7 @@
 }
 
 .gCalFlow .gcf-item-date-block {
-    /*font-size: 76%;*/
+    font-size: 1.4em;
     /*font-weight: bold;*/
 
 }
@@ -136,7 +136,13 @@
 #gcf-nate-events {
     height: auto;
     margin-bottom: 0;
-    padding-bottom: 5px;
+    padding: 0 5px 5px 5px;
+}
+
+@media (min-width: 480px) {
+    #gcf-nate-events {
+        min-width: 300px;
+    }
 }
 
 .gcf-item-container-block {

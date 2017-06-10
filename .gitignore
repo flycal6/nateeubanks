@@ -48,5 +48,6 @@ crashlytics-build.properties
 
 # Server Config
 .htaccess
+/.htaccess
 
 # Created by .ignore support plugin (hsz.mobi)

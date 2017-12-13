@@ -134,13 +134,13 @@ Image credits: unsplash.com
   background-repeat: no-repeat;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url("images/nateback.jpg");
+  background-image: url("../images/nateback.jpg");
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url("images/nate2.jpg");
+  background-image: url("../images/nate2.jpg");
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url("images/nate3.jpg");
+  background-image: url("../images/nate3.jpg");
 }
 
 /********************************/

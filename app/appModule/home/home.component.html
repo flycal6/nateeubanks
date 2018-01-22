@@ -1,0 +1,141 @@
+<!-- Carousel (images are specified in fade.css)
+================================================== -->
+<div class="carousel fade-carousel slide carousel-fade" data-ride="carousel" data-interval="5000" id="bs-carousel">
+    <!-- Overlay -->
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bs-carousel" data-slide-to="1"></li>
+        <li data-target="#bs-carousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item slides active">
+            <div class="slide-1">
+                <div class="overlay"></div>
+            </div>
+            <div class="hero">
+                <hgroup>
+                    <h1>@nateeubanks</h1>
+                    <h2>...each time he finds a new way to make me laugh...Truly a funny dude.</h2>
+                    <h4>- Rob Schulte</h4>
+                </hgroup>
+                <!-- <button class="btn btn-hero btn-lg" role="button">See all features</button> -->
+            </div>
+        </div>
+        <div class="item slides">
+            <div class="slide-2">
+                <div class="overlay"></div>
+            </div>
+            <div class="hero">
+                <hgroup>
+                    <h2>Nate Eubanks is one of the funniest people I know.</h2>
+                    <h4>- Tristan Newell</h4>
+                </hgroup>
+                <a href="mailto:nathan.eubanks@gmail.com"><button class="btn btn-hero btn-lg" role="button" type="button">Book Nate</button></a>
+            </div>
+        </div>
+        <div class="item slides">
+            <div class="slide-3">
+                <div class="overlay"></div>
+            </div>
+            <div class="hero">
+                <hgroup>
+                    <h2>He’s the type of comic I love to book...</h2>
+                    <h4>- Matt Keck</h4>
+                </hgroup>
+                <a href="https://drive.google.com/folderview?id=0BzgqfV9PL27hMTR6NTdqRzFiMlE&usp=sharing"><button class="btn btn-hero btn-lg" role="button" type="button">Gallery</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <!-- Twitter TimeLine and Video -->
+    <!-- ================================================== -->
+
+    <div class="row">
+        <div class="col-sm-3">
+            <!-- height attr is not HTML5 compliant but functions; replacing with style tag doesn't work -->
+            <a class="twitter-timeline" href="https://twitter.com/NateEubanks" data-widget-id="649626255378247680" height="500">Tweets by @NateEubanks</a>
+            <script>
+                ! function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + "://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "twitter-wjs");
+            </script>
+        </div>
+
+        <hr class="featurette-divider mobile-only" />
+
+        <!-- 16:9 aspect ratio video-->
+        <div class="col-sm-15 col-md-9">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/x1IbvhJfLOo"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="marketing">
+
+        <!-- START THE FEATURETTES -->
+
+        <!-- <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Truly a funny dude</h2><h4><span class="text-muted"><a href="https://twitter.com/robkschulte">@robkschulte</a></span></h4>
+                <p class="lead">"I've seen Nate multiple times, and each time he finds a new way to make me laugh. I'm happy
+                    to perform on the same stage with him, have him as a guest on the podcast, or just sit in the audience.
+                    Truly a funny dude." - Rob Schulte</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" src="images/natesmile.jpg" alt="Image of Nate smiling">
+            </div>
+        </div> -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 col-md-push-5">
+                <h2 class="featurette-heading">Nate Eubanks</h2>
+                <h4><span class="text-muted"><a href="https://twitter.com/NateEubanks">@NateEubanks</a></span></h4>
+                <p class="lead">Nate Eubanks grew up in rural Northeast Kansas and later worked internationally in Paraguay and Kuwait. He has performed stand up comedy in eight countries: Canada, Kuwait, Qatar, Bahrain, South Africa, Netherlands, Australia and through
+                    the midwest USA. From 5 star hotels in Qatar, art galleries in Johannesburg, garages in Chicago, and finally clubs in Sydney, Nate brings the laughs to every audience.</p>
+            </div>
+            <div class="col-md-5 col-md-pull-7">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" src="images/head2.jpg" alt="Image of Nate">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!--<div class="row featurette">-->
+        <!--<div class="col-md-7">-->
+        <!--<h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>-->
+        <!--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
+                euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>-->
+        <!--</div>-->
+        <!--<div class="col-md-5">-->
+        <!--<img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
+                src="images/natesmile.jpg" alt="Generic placeholder image">-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--<hr class="featurette-divider">-->
+
+        <!-- /END THE FEATURETTES -->
+    </div>
+</div>

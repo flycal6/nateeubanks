@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="appModule">
 
 <head>
     <meta charset="utf-8">
@@ -27,6 +27,30 @@
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/fade.css" rel="stylesheet" />
 
+    <!-- Angular/3rd Party -->
+    <!-- <script src="./js/angularjs/angular.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+
+    <!-- ngRoute -->
+    <!-- <script src="./js/angularjs/angular-route.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.js"></script>
+
+    <!-- bootstrap dependencies -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+
+    <!-- Modules -->
+    <script src="./app/appModule/app.module.js"></script>
+
+    <!-- Service -->
+    <!-- <script src="./app/appModule/nate.service.js"></script> -->
+
+    <!-- Components -->
+    <script src="./app/appModule/navigation/navigation.component.js"></script>
+    <script src="./app/appModule/notFound/notFound.component.js"></script>
+    <script src="./app/appModule/home/home.component.js"></script>
+    <script src="./app/appModule/review/review.component.js"></script>
+
     <!-- gCalFlow -->
     <link href="jquery-gcal-flow-3.0.1/jquery.gcal_flow.css" rel="stylesheet" type="text/css">
 
@@ -51,238 +75,14 @@
 </head>
 
 <body>
-    <!-- NAVBAR
-================================================== -->
-    <nav class="navbar navbar-inverse navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand active" href="/">Nate Eubanks</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="reviews">Reviews</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=qdFZyUNPiyQ" target="_blank">YouTube</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="mailto:nathan.eubanks@gmail.com">nathan.eubanks@gmail.com</a></li>
-                            <li><a href="https://twitter.com/NateEubanks" target="_blank">@NateEubanks</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Past Shows<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-header">Recent Shows</li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="http://www.breakroomdowntown.com/" target="_blank">Topeka, KS - Breakroom</a></li>
-                            <li><a href="#">Kansas City, MO - Stanford and Sons, Kick Comedy Theater, Uptown Arts Bar</a></li>
-                            <li><a href="#">Lawrence, KS - Replay lounge, Jackpot Saloon, Jazzhaus, Oread</a></li>
-                            <li><a href="http://www.riley.army.mil/" target="_blank">Fort Riley, KS - Fort Riley Military Base</a></li>
-                            <li><a href="https://www.facebook.com/zoolarious/" target="_blank">Lincoln, NE - Zoolarious</a></li>
-                            <li><a href="http://www.livekuwait.com/" target="_blank">Kuwait City, Kuwait - The Live Theater, Bayt Lothan</a></li>
-                            <li><a href="http://shitholehq.com" target="_blank">Chicago, IL - The Shit Hole</a></li>
-                            <li><a href="http://drovers-dog.com/" target="_blank">Amsterdam, Netherlands - Drover’s Dog</a></li>
-                            <li><a href="http://www.kitchbar.com/" target="_blank">Toronto, Ontario - Kitch Komedy</a></li>
-                            <li><a href="#">Johannesburg, South Africa - The Box a Goliath and Goliath Production</a></li>
-                            <li><a href="#">Paris, France - A terrible hostel open mic</a></li>
-                            <li><a href="http://www.stregisdoha.com/" target="_blank">Doha, Qatar - Jazz at the Lincoln Center at St. Regis</a></li>
-                            <li><a href="http://thedomainhotels.com/restaurant_1/txoko.en.html" target="_blank">Manama, Bahrain - Txoko Lounge</a></li>
-                            <li><a href="http://www.comedyclubbangkok.com/" target="_blank">Bangkok, Thailand - Comedy Club Bangkok, Stagetime Comedy Club</a></li>
-                            <li role="separator" class="divider"></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shows<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div id="gcf-nate-events">
-                                    <div class="gcf-item-container-block">
-                                        <div class="gcf-item-block">
-                                            <div class="gcf-item-header-block">
-                                                <div class="gcf-item-date-block">
-                                                    <span class="gcf-item-daterange"></span>
-                                                </div>
-                                                <div class="gcf-item-title-block">
-                                                    <strong class="gcf-item-title"></strong>
-                                                </div>
-                                            </div>
-                                            <div class="gcf-item-body-block">
-                                                <div class="gcf-item-description">
-                                                </div>
-                                                <div class="gcf-item-location">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Carousel (images are specified in fade.css)
-================================================== -->
-    <div class="carousel fade-carousel slide carousel-fade" data-ride="carousel" data-interval="5000" id="bs-carousel">
-        <!-- Overlay -->
-
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#bs-carousel" data-slide-to="1"></li>
-            <li data-target="#bs-carousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item slides active">
-                <div class="slide-1">
-                    <div class="overlay"></div>
-                </div>
-                <div class="hero">
-                    <hgroup>
-                        <h1>@nateeubanks</h1>
-                        <h2>...each time he finds a new way to make me laugh...Truly a funny dude.</h2>
-                        <h4>- Rob Schulte</h4>
-                    </hgroup>
-                    <!-- <button class="btn btn-hero btn-lg" role="button">See all features</button> -->
-                </div>
-            </div>
-            <div class="item slides">
-                <div class="slide-2">
-                    <div class="overlay"></div>
-                </div>
-                <div class="hero">
-                    <hgroup>
-                        <h2>Nate Eubanks is one of the funniest people I know.</h2>
-                        <h4>- Tristan Newell</h4>
-                    </hgroup>
-                    <a href="mailto:nathan.eubanks@gmail.com"><button class="btn btn-hero btn-lg" role="button" type="button">Book Nate</button></a>
-                </div>
-            </div>
-            <div class="item slides">
-                <div class="slide-3">
-                    <div class="overlay"></div>
-                </div>
-                <div class="hero">
-                    <hgroup>
-                        <h2>He’s the type of comic I love to book...</h2>
-                        <h4>- Matt Keck</h4>
-                    </hgroup>
-                    <a href="https://drive.google.com/folderview?id=0BzgqfV9PL27hMTR6NTdqRzFiMlE&usp=sharing"><button class="btn btn-hero btn-lg" role="button" type="button">Gallery</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <!-- Twitter TimeLine and Video -->
-        <!-- ================================================== -->
-
-        <div class="row">
-            <div class="col-sm-3">
-                <!-- height attr is not HTML5 compliant but functions; replacing with style tag doesn't work -->
-                <a class="twitter-timeline" href="https://twitter.com/NateEubanks" data-widget-id="649626255378247680" height="500">Tweets by @NateEubanks</a>
-                <script>
-                    ! function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0],
-                            p = /^http:/.test(d.location) ? 'http' : 'https';
-                        if (!d.getElementById(id)) {
-                            js = d.createElement(s);
-                            js.id = id;
-                            js.src = p + "://platform.twitter.com/widgets.js";
-                            fjs.parentNode.insertBefore(js, fjs);
-                        }
-                    }(document, "script", "twitter-wjs");
-                </script>
-            </div>
-
-            <hr class="featurette-divider mobile-only" />
-
-            <!-- 16:9 aspect ratio video-->
-            <div class="col-sm-15 col-md-9">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/x1IbvhJfLOo"></iframe>
-                </div>
-            </div>
-        </div>
-
-        <!-- Marketing messaging and featurettes
-    ================================================== -->
-        <!-- Wrap the rest of the page in another container to center all the content. -->
-
-        <div class="marketing">
-
-            <!-- START THE FEATURETTES -->
-
-            <!-- <hr class="featurette-divider">
-
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Truly a funny dude</h2><h4><span class="text-muted"><a href="https://twitter.com/robkschulte">@robkschulte</a></span></h4>
-                <p class="lead">"I've seen Nate multiple times, and each time he finds a new way to make me laugh. I'm happy
-                    to perform on the same stage with him, have him as a guest on the podcast, or just sit in the audience.
-                    Truly a funny dude." - Rob Schulte</p>
-            </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" src="images/natesmile.jpg" alt="Image of Nate smiling">
-            </div>
-        </div> -->
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7 col-md-push-5">
-                    <h2 class="featurette-heading">Nate Eubanks</h2>
-                    <h4><span class="text-muted"><a href="https://twitter.com/NateEubanks">@NateEubanks</a></span></h4>
-                    <p class="lead">Nate Eubanks grew up in rural Northeast Kansas and later worked internationally in Paraguay and Kuwait. He has performed stand up comedy in eight countries: Canada, Kuwait, Qatar, Bahrain, South Africa, Netherlands, Australia and through
-                        the midwest USA. From 5 star hotels in Qatar, art galleries in Johannesburg, garages in Chicago, and finally clubs in Sydney, Nate brings the laughs to every audience.</p>
-                </div>
-                <div class="col-md-5 col-md-pull-7">
-                    <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" src="images/head2.jpg" alt="Image of Nate">
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <!--<div class="row featurette">-->
-            <!--<div class="col-md-7">-->
-            <!--<h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>-->
-            <!--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-                euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>-->
-            <!--</div>-->
-            <!--<div class="col-md-5">-->
-            <!--<img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
-                src="images/natesmile.jpg" alt="Generic placeholder image">-->
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--<hr class="featurette-divider">-->
-
-            <!-- /END THE FEATURETTES -->
-
-            <!-- FOOTER -->
-            <footer class="footer">
-                <p><a href="http://18.220.25.115/">&copy; 2017 Brian Thomas &middot;</a>
-                    <span class="pull-right"><a href="#">Back to top</a></span></p>
-            </footer>
-
-        </div>
-        <!-- /.container -->
-    </div>
+    <navigation></navigation>
+    <ng-view></ng-view>
+    <footer></footer>
 
     <!-- Bootstrap core JavaScript
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- gCalFlow
@@ -308,14 +108,6 @@
         });
     </script>
 
-    <!-- <script>
-    function loadLinks() {
-        var sourceLink = document.getElementById('aSource');
-        sourceLink = sourceLink.innerHTML;
-
-        document.getElementById("aClicked").setAttribute('href', sourceLink);
-    }
-</script> -->
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
 =======================================================================-->

@@ -1,4 +1,4 @@
-angular.module('appModule', ['ngRoute']).config(
+angular.module('appModule', ['ngRoute', 'ngtweet']).config(
     function($routeProvider) {
         $routeProvider
             .when('/', {

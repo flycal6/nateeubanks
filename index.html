@@ -28,15 +28,13 @@
     <link href="css/fade.css" rel="stylesheet" />
 
     <!-- Angular/3rd Party -->
-    <!-- <script src="./js/angularjs/angular.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="js/angularjs/angular.min.js"></script>
 
     <!-- ngRoute -->
-    <!-- <script src="./js/angularjs/angular-route.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.js"></script>
+    <script src="js/angularjs/angular-route.min.js"></script>
 
     <!-- bootstrap dependencies -->
-    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/popper.min.js"></script>
 
     <!-- Modules -->
@@ -50,13 +48,14 @@
     <script src="./app/appModule/notFound/notFound.component.js"></script>
     <script src="./app/appModule/home/home.component.js"></script>
     <script src="./app/appModule/review/review.component.js"></script>
+    <script src="./app/appModule/footer/footer.component.js"></script>
 
     <!-- gCalFlow -->
     <link href="jquery-gcal-flow-3.0.1/jquery.gcal_flow.css" rel="stylesheet" type="text/css">
 
     <!-- Google Analytics
     =============================================================================================-->
-    <script>
+    <!-- <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function() {
@@ -71,13 +70,13 @@
 
         ga('create', 'UA-90104218-2', 'auto');
         ga('send', 'pageview');
-    </script>
+    </script> -->
 </head>
 
 <body>
     <navigation></navigation>
     <ng-view></ng-view>
-    <footer></footer>
+    <page-footer></page-footer>
 
     <!-- Bootstrap core JavaScript
 ================================================== -->

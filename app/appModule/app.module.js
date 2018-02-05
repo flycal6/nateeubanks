@@ -5,7 +5,7 @@ angular.module('appModule', ['ngRoute']).config(
                 template: '<home></home>'
             })
             .when('/reviews', {
-                template: '<review></review>'
+                template: '<reviews></reviews>'
             })
             .otherwise({
                 template: '<not-found></not-found>'

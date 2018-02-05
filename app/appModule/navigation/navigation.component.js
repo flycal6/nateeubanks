@@ -10,6 +10,7 @@ angular.module('appModule').component('navigation', {
     vm.goHome = function() {
         $location.path('/');
     };
+
   },
   controllerAs: 'vm'
 

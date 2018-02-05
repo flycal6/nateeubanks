@@ -1,4 +1,25 @@
+<!-- gCalFlow
+================================================== -->
+<script>
+    _gCalFlow_debug = false;
+</script>
+<script type="text/javascript" src="jquery-gcal-flow-3.0.1/jquery.gcal_flow.js"></script>
 
+<script type="text/javascript">
+    $(function() {
+        $('#gcf-nate-events').gCalFlow({
+            calid: 'j4ttdotndrai1e6grt7bp7i6ko@group.calendar.google.com',
+            // callback: loadLinks(),
+            // Comment out the apikey line below only for testing
+            apikey: 'AIzaSyC8z-yio3AXTmOXlgt8zQam57uSD8tMObY',
+            maxitem: 15,
+            auto_scroll: false,
+            no_items_html: 'No Upcoming Shows',
+            // link_item_title: false,
+            // link_item_description: true
+        });
+    });
+</script>
     <!-- NAVBAR
 ================================================== -->
     <nav class="navbar navbar-inverse navbar-static-top">

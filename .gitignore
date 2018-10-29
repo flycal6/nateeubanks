@@ -31,3 +31,7 @@ crashlytics-build.properties
 /.htaccess
 
 .DS_Store
+
+.metadata
+.recommenders
+Servers

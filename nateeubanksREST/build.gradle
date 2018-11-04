@@ -10,7 +10,7 @@ group = 'com.nateeubanks'
 version = '0.0.1-SNAPSHOT'
 
 ext {
-  springVersion = "4.3.20.RELEASE"
+  springVersion = "4.2.9.RELEASE"
 }
 
 sourceCompatibility = 1.8

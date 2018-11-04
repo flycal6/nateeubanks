@@ -9,4 +9,6 @@
 Servers
 nateeubanksREST/.gradle
 nateeubanksREST/build
+nateeubanksREST/bin
 nateeubanksJPA/build
+nateeubanksJPA/bin

@@ -8,4 +8,5 @@
 .recommenders
 Servers
 nateeubanksREST/.gradle
+nateeubanksREST/build
 nateeubanksJPA/build

@@ -1,0 +1,65 @@
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/">
+    <mat-icon>home</mat-icon>
+    {{title}}
+  </button>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+
+  <div fxLayout="row" fxHide fxShow.gt-sm>
+    <button mat-button routerLink="/reviews">Reviews</button>
+    <a mat-button href="https://www.youtube.com/watch?v=qdFZyUNPiyQ">YouTube</a>
+    <button mat-button [matMenuTriggerFor]="contacts">Contact</button>
+    <button mat-button [matMenuTriggerFor]="recentShows">Recent Shows</button>
+    <button mat-button [matMenuTriggerFor]="upcomingShows">Upcoming Shows</button>
+  </div>
+  <button mat-button [mat-menu-trigger-for]="menu" fxShow fxHide.gt-sm>
+    <mat-icon>menu</mat-icon>
+  </button>
+
+</mat-toolbar>
+<mat-menu x-position="before" #menu>
+  <button mat-menu-item routerLink="/reviews">Reviews</button>
+  <a mat-menu-item href="https://www.youtube.com/watch?v=qdFZyUNPiyQ">YouTube</a>
+</mat-menu>
+
+<mat-menu #recentShows="matMenu">
+  <a mat-menu-item href="http://www.titanee.com/occ">Muscat, Oman - Oman Comedy Central</a>
+  <a mat-menu-item href="https://www.facebook.com/Standuperi/">Tbilisi, Georgia - STANDUP ერი</a>
+  <a mat-menu-item href="http://www.breakroomdowntown.com/" target="_blank">Topeka, KS - Breakroom</a>
+  <a mat-menu-item href="#">Kansas City, MO - Stanford and Sons, Kick Comedy Theater, Uptown Arts Bar</a>
+  <a mat-menu-item href="#">Lawrence, KS - Replay lounge, Jackpot Saloon, Jazzhaus, Oread</a>
+  <a mat-menu-item href="http://www.riley.army.mil/" target="_blank">Fort Riley, KS - Fort Riley
+    Military Base</a>
+  <a mat-menu-item href="https://www.facebook.com/zoolarious/" target="_blank">Lincoln, NE - Zoolarious</a>
+  <a mat-menu-item href="http://www.livekuwait.com/" target="_blank">Kuwait City, Kuwait - The Live
+    Theater, Bayt Lothan</a>
+  <a mat-menu-item href="http://shitholehq.com" target="_blank">Chicago, IL - The Shit Hole</a>
+  <a mat-menu-item href="http://drovers-dog.com/" target="_blank">Amsterdam, Netherlands - Drover’s Dog</a>
+  <a mat-menu-item href="http://www.kitchbar.com/" target="_blank">Toronto, Ontario - Kitch Komedy</a>
+  <a mat-menu-item href="#">Johannesburg, South Africa - The Box a Goliath and Goliath Production</a>
+  <a mat-menu-item href="http://www.stregisdoha.com/" target="_blank">Doha, Qatar - Jazz at the Lincoln
+    Center at St. Regis</a>
+  <a mat-menu-item href="http://thedomainhotels.com/restaurant_1/txoko.en.html" target="_blank">Manama,
+    Bahrain - Txoko Lounge</a>
+  <a mat-menu-item href="http://www.comedyclubbangkok.com/" target="_blank">Bangkok, Thailand - Comedy
+    Club Bangkok, Stagetime Comedy Club</a>
+  <a mat-menu-item href="http://sydneycomedyclub.com.au" target="_blank">Sydney, Australia - Sydney
+    Comedy Club, Sydney Fringe Festival</a>
+  <a mat-menu-item href="http://amicinhand.com/" target="_blank">Sydney, Australia - A Mic In Hand,
+    Comedy Lounge</a>
+  <a mat-menu-item href="#" target="_blank">Tbilisi, Georgia - Backstage76</a>
+  <a mat-menu-item href="https://www.facebook.com/events/2139664302710758/" target="_blank">Moscow,
+    Russia - The Loft Moscow</a>
+  <a mat-menu-item href="#" target="_blank">St. Petersburg, Russia - Art-Lab Medovarus</a>
+</mat-menu>
+
+<mat-menu #upcomingShows="matMenu">
+  <a mat-menu-item href="https://www.youtube.com/watch?v=qdFZyUNPiyQ">YouTube</a>
+</mat-menu>
+
+<mat-menu #contacts="matMenu">
+  <a mat-menu-item routerLink="mailto:nathan.eubanks@gmail.com">Email</a>
+  <a mat-menu-item href="https://twitter.com/NateEubanks">@NateEubanks</a>
+</mat-menu>

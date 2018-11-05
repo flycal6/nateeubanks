@@ -45,6 +45,9 @@ dependencies {
     compile group: 'javax.servlet', name: 'javax.servlet-api', version:'3.1.0'
     compile group: 'javax.servlet', name: 'jstl', version:'1.2'
     compile group: 'org.hibernate', name: 'hibernate-validator', version:'6.0.13.Final'
+    
+    // necessary for entityManagerFactory bean creation when using java 9 or later
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
 
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.7'
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.7'

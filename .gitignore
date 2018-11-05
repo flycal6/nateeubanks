@@ -3,6 +3,7 @@
 /.htaccess
 
 .DS_Store
+.vscode
 
 .metadata
 .recommenders

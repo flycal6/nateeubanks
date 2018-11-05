@@ -4,6 +4,7 @@
 
 .DS_Store
 .vscode
+.settings
 
 .metadata
 .recommenders
@@ -11,5 +12,14 @@ Servers
 nateeubanksREST/.gradle
 nateeubanksREST/build
 nateeubanksREST/bin
+nateeubanksJPA/.gradle
 nateeubanksJPA/build
 nateeubanksJPA/bin
+nateeubanksJPA/.classpath
+
+.gradle
+.project
+build.gradle
+gradle
+gradlew
+gradlew.bat

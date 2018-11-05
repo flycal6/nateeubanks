@@ -9,11 +9,15 @@ import { MatToolbarModule, MatIconModule, MatButtonModule, MatSidenavModule } fr
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { UpcomingShowsComponent } from './upcoming-shows/upcoming-shows.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    ReviewsComponent,
+    UpcomingShowsComponent
   ],
   imports: [
     BrowserModule,

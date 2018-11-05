@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
     <button mat-button routerLink="/">
-        <mat-icon>home</mat-icon>
+        <mat-icon>local_play</mat-icon>
         {{title}}
     </button>
 
@@ -12,7 +12,7 @@
         <a mat-button href="https://www.youtube.com/watch?v=qdFZyUNPiyQ">YouTube</a>
         <button mat-button [matMenuTriggerFor]="contacts">Contact</button>
         <button mat-button [matMenuTriggerFor]="recentShows">Recent Shows</button>
-        <button mat-button [matMenuTriggerFor]="upcomingShows">Upcoming Shows</button>
+        <button mat-button [routerLink]="['/upcoming-shows']" routerLinkActive="router-link-active">Upcoming Shows</button>
     </div>
     <button mat-button [mat-menu-trigger-for]="menu" fxShow fxHide.gt-sm>
         <mat-icon>menu</mat-icon>
@@ -25,7 +25,7 @@
     <a mat-button href="https://www.youtube.com/watch?v=qdFZyUNPiyQ">YouTube</a>
     <button mat-button [matMenuTriggerFor]="contacts">Contact</button>
     <button mat-button [matMenuTriggerFor]="recentShows">Recent Shows</button>
-    <button mat-button [matMenuTriggerFor]="upcomingShows">Upcoming Shows</button>
+    <button mat-button [routerLink]="['/upcoming-shows']" routerLinkActive="router-link-active">Upcoming Shows</button>
 </mat-menu>
 
 <mat-menu #recentShows="matMenu">

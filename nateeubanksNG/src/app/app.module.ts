@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { UpcomingShowsComponent } from './upcoming-shows/upcoming-shows.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ReviewsComponent,
-    UpcomingShowsComponent
+    UpcomingShowsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -10,12 +10,17 @@
 .recommenders
 Servers
 nateeubanksREST/.gradle
-nateeubanksREST/build
-nateeubanksREST/bin
 nateeubanksJPA/.gradle
+nateeubanksREST/gradlew
+nateeubanksJPA/gradlew
+nateeubanksREST/gradlew.bat
+nateeubanksJPA/gradlew.bat
+nateeubanksREST/build
 nateeubanksJPA/build
+nateeubanksREST/bin
 nateeubanksJPA/bin
 nateeubanksJPA/.classpath
+nateeubanksREST/.classpath
 
 .gradle
 .project

@@ -1,10 +1,6 @@
-<!--
-    Carousel (images are specified in fade.css)
-    ==================================================
--->
+<!-- Carousel (images are specified in fade.css) -->
+<!-- ================================================ -->
 <div class="carousel fade-carousel slide carousel-fade" data-ride="carousel" data-interval="5000" id="bs-carousel">
-    <!-- Overlay -->
-
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
@@ -48,26 +44,22 @@
     </div>
 </div>
 
+<!-- Twitter TimeLine and Video -->
+<!-- ================================================== -->
 <div class="container-fluid">
-    <!-- Twitter TimeLine and Video -->
-    <!-- ================================================== -->
-
     <div class="row">
-        <div class="col-sm-3">
-            <ngx-twitter-timeline [data]="{ sourceType: 'url', url: 'https://twitter.com/NateEubanks' }" [opts]="{ tweetLimit: 5 }"></ngx-twitter-timeline></div>
+        <div class="col-sm-3"><ngx-twitter-timeline [data]="{ sourceType: 'url', url: 'https://twitter.com/hannibalburess' }" [opts]="{ tweetLimit: 5 }"></ngx-twitter-timeline></div>
 
         <hr class="featurette-divider mobile-only" />
 
         <!-- 16:9 aspect ratio video -->
-        <div class="col-sm-15 col-md-9">
+        <div class="col-sm-12 col-md-9">
             <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/x1IbvhJfLOo"></iframe></div>
         </div>
     </div>
 
-    <!--
-        Marketing messaging and featurettes
-        ================================================
-    -->
+    <!-- Nate's bio and pic -->
+    <!-- ================================================ -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="marketing">
@@ -90,5 +82,5 @@
 
         <hr class="featurette-divider" />
     </div>
-    <!-- /.container -->
 </div>
+<!-- /.container-fluid -->

@@ -15,6 +15,9 @@ import { FooterComponent } from './footer/footer.component';
 import { PastShowsComponent } from './past-shows/past-shows.component';
 import { HomeComponent } from './home/home.component';
 
+// twitter timeline
+import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
+
 @NgModule({
     declarations: [AppComponent, NavbarComponent, ReviewsComponent, UpcomingShowsComponent, FooterComponent, PastShowsComponent, HomeComponent],
     imports: [
@@ -27,7 +30,8 @@ import { HomeComponent } from './home/home.component';
         MatIconModule,
         MatButtonModule,
         MatSidenavModule,
-        MatCardModule
+        MatCardModule,
+        NgxTwitterTimelineModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]

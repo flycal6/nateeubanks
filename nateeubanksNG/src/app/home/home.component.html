@@ -1,5 +1,7 @@
- <!-- Carousel (images are specified in fade.css)
-================================================== -->
+<!--
+    Carousel (images are specified in fade.css)
+    ==================================================
+-->
 <div class="carousel fade-carousel slide carousel-fade" data-ride="carousel" data-interval="5000" id="bs-carousel">
     <!-- Overlay -->
 
@@ -13,9 +15,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item slides active">
-            <div class="slide-1">
-                <div class="overlay"></div>
-            </div>
+            <div class="slide-1"><div class="overlay"></div></div>
             <div class="hero">
                 <div>
                     <h1>@nateeubanks</h1>
@@ -26,22 +26,17 @@
             </div>
         </div>
         <div class="item slides">
-            <div class="slide-2">
-                <div class="overlay"></div>
-            </div>
+            <div class="slide-2"><div class="overlay"></div></div>
             <div class="hero">
                 <div>
                     <h2>a pleasure to have on our line-up</h2>
                     <h4>- Sean Morahan</h4>
                 </div>
-                <a href="mailto:nathan.eubanks@gmail.com"><button class="btn btn-hero btn-lg" role="button" type="button">Book
-                        Nate</button></a>
+                <a href="mailto:nathan.eubanks@gmail.com"><button class="btn btn-hero btn-lg" role="button" type="button">Book Nate</button></a>
             </div>
         </div>
         <div class="item slides">
-            <div class="slide-3">
-                <div class="overlay"></div>
-            </div>
+            <div class="slide-3"><div class="overlay"></div></div>
             <div class="hero">
                 <div>
                     <h2>He’s the type of comic I love to book...</h2>
@@ -51,4 +46,49 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="container-fluid">
+    <!-- Twitter TimeLine and Video -->
+    <!-- ================================================== -->
+
+    <div class="row">
+        <div class="col-sm-3">
+            <ngx-twitter-timeline [data]="{ sourceType: 'url', url: 'https://twitter.com/NateEubanks' }" [opts]="{ tweetLimit: 5 }"></ngx-twitter-timeline></div>
+
+        <hr class="featurette-divider mobile-only" />
+
+        <!-- 16:9 aspect ratio video -->
+        <div class="col-sm-15 col-md-9">
+            <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/x1IbvhJfLOo"></iframe></div>
+        </div>
+    </div>
+
+    <!--
+        Marketing messaging and featurettes
+        ================================================
+    -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="marketing">
+        <hr class="featurette-divider" />
+
+        <div class="row featurette">
+            <div class="col-md-7 col-md-push-5">
+                <h2 class="featurette-heading">Nate Eubanks</h2>
+                <h4>
+                    <span class="text-muted"><a href="https://twitter.com/NateEubanks">@NateEubanks</a></span>
+                </h4>
+                <p class="lead">
+                    Nate Eubanks grew up in rural Northeast Kansas outside of a town of just over 3,000. He has performed stand-up comedy in 12 countries: Canada, Kuwait, Qatar, Bahrain, South Africa,
+                    Netherlands, Australia, Thailand, Georgia, Oman, Russia and through the midwest USA. From 5 star hotels in Qatar, art galleries in Johannesburg, garages in Chicago, clubs in
+                    Sydney, and bars in Tbilisi Nate brings the laughs to every audience.
+                </p>
+            </div>
+            <div class="col-md-5 col-md-pull-7"><img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" src="/assets/images/head2.jpg" alt="Image of Nate" /></div>
+        </div>
+
+        <hr class="featurette-divider" />
+    </div>
+    <!-- /.container -->
 </div>

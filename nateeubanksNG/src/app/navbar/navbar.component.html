@@ -1,30 +1,27 @@
 <mat-toolbar color="primary">
     <button mat-button routerLink="/">
         <mat-icon>local_play</mat-icon>
-        {{title}}
+        {{ title }}
     </button>
 
     <!-- This fills the remaining space of the current row -->
     <span class="fill-remaining-space"></span>
 
     <div fxLayout="row" fxHide fxShow.gt-sm>
-        <button mat-button routerLink="/reviews">Reviews</button>
-        <a mat-button href="https://www.youtube.com/watch?v=qdFZyUNPiyQ">YouTube</a>
-        <button mat-button [matMenuTriggerFor]="contacts">Contact</button>
-        <button mat-button [matMenuTriggerFor]="recentShows">Recent Shows</button>
+        <button mat-button routerLink="/reviews">Reviews</button> <button mat-button routerLink="/gallery">Gallery</button>
+        <!-- <a mat-button href="https://www.youtube.com/watch?v=qdFZyUNPiyQ">YouTube</a> -->
+        <button mat-button [matMenuTriggerFor]="contacts">Contact</button> <button mat-button [matMenuTriggerFor]="recentShows">Recent Shows</button>
         <button mat-button [routerLink]="['/upcoming-shows']" routerLinkActive="router-link-active">Upcoming Shows</button>
     </div>
-    <button mat-button [mat-menu-trigger-for]="menu" fxShow fxHide.gt-sm>
-        <mat-icon>menu</mat-icon>
-    </button>
-
+    <button mat-button [mat-menu-trigger-for]="menu" fxShow fxHide.gt-sm><mat-icon>menu</mat-icon></button>
 </mat-toolbar>
 
 <mat-menu x-position="before" #menu>
-    <button mat-button routerLink="/reviews">Reviews</button>
-    <a mat-button href="https://www.youtube.com/watch?v=qdFZyUNPiyQ">YouTube</a>
-    <button mat-button [matMenuTriggerFor]="contacts">Contact</button>
-    <button mat-button [matMenuTriggerFor]="recentShows">Recent Shows</button>
+    <button mat-button routerLink="/reviews">Reviews</button><br />
+    <button mat-button routerLink="/gallery">Gallery</button><br />
+    <!-- <a mat-button href="https://www.youtube.com/watch?v=qdFZyUNPiyQ">YouTube</a> -->
+    <button mat-button [matMenuTriggerFor]="contacts">Contact</button><br />
+    <button mat-button [matMenuTriggerFor]="recentShows">Recent Shows</button><br />
     <button mat-button [routerLink]="['/upcoming-shows']" routerLinkActive="router-link-active">Upcoming Shows</button>
 </mat-menu>
 
@@ -51,11 +48,10 @@
     <a mat-menu-item href="#" target="_blank">St. Petersburg, Russia - Art-Lab Medovarus</a>
 </mat-menu>
 
-<mat-menu #upcomingShows="matMenu">
-    <a mat-menu-item href="https://www.youtube.com/watch?v=qdFZyUNPiyQ">YouTube</a>
-</mat-menu>
+<!--
+    <mat-menu #upcomingShows="matMenu">
+        <a mat-menu-item href="https://www.youtube.com/watch?v=qdFZyUNPiyQ">YouTube</a>
+    </mat-menu>
+-->
 
-<mat-menu #contacts="matMenu">
-    <a mat-menu-item href="mailto:nathan.eubanks@gmail.com">Email</a>
-    <a mat-menu-item href="https://twitter.com/NateEubanks">@NateEubanks</a>
-</mat-menu>
+<mat-menu #contacts="matMenu"> <a mat-menu-item href="mailto:nathan.eubanks@gmail.com">Email</a> <a mat-menu-item href="https://twitter.com/NateEubanks">@NateEubanks</a> </mat-menu>

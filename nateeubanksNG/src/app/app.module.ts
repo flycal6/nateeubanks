@@ -17,9 +17,10 @@ import { HomeComponent } from './home/home.component';
 
 // twitter timeline
 import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
-    declarations: [AppComponent, NavbarComponent, ReviewsComponent, UpcomingShowsComponent, FooterComponent, PastShowsComponent, HomeComponent],
+    declarations: [AppComponent, NavbarComponent, ReviewsComponent, UpcomingShowsComponent, FooterComponent, PastShowsComponent, HomeComponent, GalleryComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,

@@ -44,17 +44,21 @@
     </div>
 </div>
 
+<hr class="featurette-divider" />
+
 <!-- Twitter TimeLine and Video -->
 <!-- ================================================== -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3"><ngx-twitter-timeline [data]="{ sourceType: 'url', url: 'https://twitter.com/hannibalburess' }" [opts]="{ tweetLimit: 5 }"></ngx-twitter-timeline></div>
+        <!-- <div class="col-sm-3"><ngx-twitter-timeline [data]="{ sourceType: 'url', url: 'https://twitter.com/hannibalburess' }" [opts]="{ tweetLimit: 5 }"></ngx-twitter-timeline></div> -->
 
         <hr class="featurette-divider mobile-only" />
 
         <!-- 16:9 aspect ratio video -->
-        <div class="col-sm-12 col-md-9">
-            <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/x1IbvhJfLOo"></iframe></div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxFlexFill>
+            <div fxFlex="100">
+                <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/x1IbvhJfLOo"></iframe></div>
+            </div>
         </div>
     </div>
 

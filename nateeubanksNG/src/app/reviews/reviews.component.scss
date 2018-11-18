@@ -3,8 +3,28 @@
     margin: 1em;
 }
 
-.example-header-image {
+.sean-header-image {
     background-image: url('http://seanmorahan.com/wp-content/uploads/2014/06/sean-morahan-003.jpg');
+    background-size: cover;
+}
+
+.rob-header-image {
+    background-image: url('/assets/images/robs.jpg');
+    background-size: cover;
+}
+
+.tristin-header-image {
+    background-image: url('/assets/images/tristen.jpg');
+    background-size: cover;
+}
+
+.ali-header-image {
+    background-image: url('/assets/images/ali-fingerz.jpg');
+    background-size: cover;
+}
+
+.matt-header-image {
+    background-image: url('/assets/images/matt-keck.jpg');
     background-size: cover;
 }
 

@@ -20,11 +20,16 @@ import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 import { GalleryComponent } from './gallery/gallery.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+// services
+import { PerformanceService } from './performance.service';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
     declarations: [AppComponent, NavbarComponent, ReviewsComponent, UpcomingShowsComponent, FooterComponent, PastShowsComponent, HomeComponent, GalleryComponent, NotFoundComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
+        HttpClientModule,
         FlexLayoutModule,
         BrowserAnimationsModule,
         MatMenuModule,
@@ -35,7 +40,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
         MatCardModule,
         NgxTwitterTimelineModule.forRoot()
     ],
-    providers: [],
+    providers: [
+        PerformanceService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,13 +1,14 @@
 import { Performance } from './performance';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
 })
 export class PerformanceService {
-    private url = 'rest/';
+    private url = 'rest/performance/';
 
     private httpOptions = {
         headers: new HttpHeaders({
@@ -34,23 +35,30 @@ export class PerformanceService {
     ];
 
     ping(): Observable<string> {
-        return this.http.get<string>(this.url + 'ping');
+        return this.http.get<string>(this.url + 'ping').pipe(catchError(this.handleError));
     }
 
-    index() {
-        return this.http.get<any[]>(this.url);
+    kaboom(): Observable<string> {
+        return this.http.get<string>(this.url + 'ping').pipe(catchError(this.handleError));
+    }
+    index(): Observable<Performance[]> {
+        return this.http.get<any[]>(this.url + 'index').pipe(catchError(this.handleError));
+    }
+
+    show(id: number): Observable<Performance> {
+        return this.http.get<any>(this.url + id).pipe(catchError(this.handleError));
     }
 
     create(performance: Performance) {
-        return this.http.post<any>(this.url + 'create', performance, this.httpOptions);
+        return this.http.post<any>(this.url + 'create', performance, this.httpOptions).pipe(catchError(this.handleError));
     }
 
-    update(id: number, performance: Performance) {
-        return this.http.put<any>(this.url + id, performance, this.httpOptions);
+    update(performance: Performance) {
+        return this.http.put<any>(this.url + performance.id, performance, this.httpOptions).pipe(catchError(this.handleError));
     }
 
     destroy(id: number) {
-        return this.http.delete<any>(this.url + id, this.httpOptions);
+        return this.http.delete<any>(this.url + id, this.httpOptions).pipe(catchError(this.handleError));
     }
 
     indexLocal(): Performance[] {
@@ -59,6 +67,11 @@ export class PerformanceService {
 
     createLocal(performance: Performance): void {
         this.performances.push(performance);
+    }
+
+    handleError(error: any) {
+        console.log(error);
+        return throwError(error || 'Performance Service Error');
     }
 
     constructor(private http: HttpClient) {}

@@ -1,6 +1,8 @@
 <div fxlayout="row" fxLayoutAlign="center" fxFlexFill>
     <div fxFlex="100">
-        <h3>{{ perfs[0].clubName }}, {{ perfs[0].location }}</h3>
-        <h3>{{ perfs[1].clubName }}, {{ perfs[1].location }}</h3>
+        <ul>
+            <li *ngFor="let p of perfs"><h3>{{ p.clubName }}, {{ p.location }}</h3></li>
+        </ul>
+
     </div>
 </div>

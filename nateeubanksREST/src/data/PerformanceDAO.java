@@ -6,13 +6,13 @@ import com.nateeubanks.entities.Performance;
 
 public interface PerformanceDAO {
 
-    public List<Performance> indexPerformance();
+    public List<Performance> index();
 
-    public Performance showPerformance(Integer id);
+    public Performance show(Integer id);
 
-    public Performance createPerformance(Performance p);
+    public Performance create(Performance p);
 
-    public Performance updatePerformance(Performance p);
+    public Performance update(Performance p);
 
-    public Boolean destroyPerformance(Integer id);
+    public Boolean destroy(Integer id);
 }

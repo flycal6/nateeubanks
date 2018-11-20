@@ -18,20 +18,20 @@ public class PerformanceDAOImpl implements PerformanceDAO {
     private EntityManager em;
 
     @Override
-    public List<Performance> indexPerformance() {
+    public List<Performance> index() {
         String query = "SELECT p FROM Performance p";
         List<Performance> performances = em.createQuery(query, Performance.class).getResultList();
         return performances;
     }
 
     @Override
-    public Performance showPerformance(Integer id) {
+    public Performance show(Integer id) {
         Performance p = em.find(Performance.class, id);
         return p;
     }
 
     @Override
-    public Performance createPerformance(Performance p) {
+    public Performance create(Performance p) {
 
         // write to the DB
         em.persist(p);
@@ -42,7 +42,7 @@ public class PerformanceDAOImpl implements PerformanceDAO {
     }
 
     @Override
-    public Performance updatePerformance(Performance p) {
+    public Performance update(Performance p) {
 
         Performance managedP = em.find(Performance.class, p.getId());
         // update managed entity
@@ -58,7 +58,7 @@ public class PerformanceDAOImpl implements PerformanceDAO {
     }
 
     @Override
-    public Boolean destroyPerformance(Integer id) {
+    public Boolean destroy(Integer id) {
         try {
             Performance p = em.find(Performance.class, id);
             em.remove(p);

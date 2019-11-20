@@ -28,7 +28,7 @@ eclipse {
 
 sourceSets {
   main {
-    java.srcDirs 'src'
+    java.srcDirs 'src/main'
     resources.srcDirs 'src/resources'
   }
   test {

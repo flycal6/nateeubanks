@@ -6,8 +6,8 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
 		<!-- List Entities Here -->
-        <class>entities.Performance</class>
-        <class>entities.User</class>
+        <class>com.nateeubanks.entities.Performance</class>
+        <class>com.nateeubanks.entities.User</class>
 
         <properties>
         	<!-- Make sure to set proper values for these when copying to a new project -->

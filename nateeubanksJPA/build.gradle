@@ -32,8 +32,8 @@ sourceSets {
     resources.srcDirs 'src/resources'
   }
   test {
-    java.srcDir 'test'
-    resources.srcDir 'src'
+    java.srcDir 'src/test'
+    resources.srcDir 'src/resources'
   }
  }
 
